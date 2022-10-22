@@ -1,0 +1,166 @@
+/* header */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+    height: auto;
+}
+
+.header .logoAndTitle {
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.header nav li {
+    display: inline;
+    list-style: none;
+}
+
+.header nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    padding: 0.8rem;
+    color: white;
+    border: 0.1rem solid white;
+    transition-duration: background-color 0.7s;
+}
+
+.header nav a:hover {
+    box-shadow: inset 0.1rem 0.1rem 0.3rem white, inset -0.1rem -0.1rem 0.2rem white;
+}
+
+.logo {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0.2rem;
+}
+
+.title {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+}
+
+/* -------------------------------------- */
+/* legend */
+
+legend {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* -------------------------------------- */
+/* fieldset */
+
+fieldset {
+    border-radius: 0.5rem;
+}
+
+/* ----------------------------------- */
+/* mainDiv */
+
+.mainDiv {
+    display: flex;
+    justify-content: center;
+}
+
+/* generator div */
+
+.generator {
+    width: 80rem;
+    height: auto;
+    text-align: justify;
+}
+
+/* ----------------------------------- */
+/* settings */
+
+table {
+    border-spacing: 2rem;
+    margin: auto;
+}
+
+tr, td {
+    text-align: center;
+}
+
+/* -------------------------------------- */
+/* acknowledgements */
+
+.generator ul {
+    list-style: square;
+}
+
+.generator a {
+    text-decoration: none;
+    color: #FF7878;
+}
+
+.generator a:visited {
+    color: #FF7878;
+}
+
+.generator a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------------------------- */
+/* footer */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-bottom: 7rem;
+}
+
+.footer a {
+    text-decoration: none;
+    color: crimson;
+    padding: 0.8rem;
+    border: 0.1rem solid white;
+    transition-duration: background-color 0.7s;
+}
+
+.footer a:hover {
+    box-shadow: inset 0.1rem 0.1rem 0.3rem white, inset -0.1rem -0.1rem 0.2rem white;
+}
+
+/* ------------------------------------- */
+/* results */
+
+.results {
+    margin-top: 2rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.results div {
+    background-color: black;
+    color: white;
+    border-radius: 0.5rem;
+    border: 0.1rem solid;
+    min-width: 30rem;
+    max-width: 80rem;
+    height: auto;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.results ul {
+    list-style: square;
+    /* margin-right: 1.7rem; */
+}
+
+.results ul li {
+    padding: 0.5rem;
+}

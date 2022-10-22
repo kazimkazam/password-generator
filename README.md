@@ -1,70 +1,90 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Password Generator
 
-## Available Scripts
+This application is based on react-redux and it delivers a single page application (SPA) that consists of the following 3 main tabs:
+- A password generator application;
+- A memorable password generator application;
+- A SHA-256 Hashing generator aplication.
 
-In the project directory, you can run:
+# Table of Contents
+- Development;
+- How to use;
+- Screenshots;
+- Tests;
+- Author;
+- References;
+- License.
 
-### `npm start`
+# Development
+The SPA was coded by making use of the React library. To access the application state, Redux was used.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+For the purpose of showing the diference, the Password Generator page container was also developed not using redux (but the Redux-based component is the one "active" in the project), but using only the this. and props from React to interact between the container and the presentational components.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The application is running on:
+- React 18.2.0
+- react-redux 8.0.4
+- @reduxjs/toolkit 1.8.5
+- redux-thunk 2.4.1
+- Axios 1.1.2
 
-### `npm test`
+The memorable password generator fetches a "dictionary" of words from (https://random-word-api.herokuapp.com/home) whenever the page is loaded, and then the words to form the password are randomly chosen.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In order to keep the application state as "clean" as possible and to help it run faster and smoother, every time a tab is selected (also acknowledgements), the state resets to the initial state.
 
-### `npm run build`
+# How to use
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The SPA consists of 3 main pages, which can be accessed using the navigation tabs, and are the following:
+- A password generator application;
+- A memorable password generator application;
+- A SHA-256 Hashing generator aplication.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Every page contains a settings "window" where the user can adjust what type of result is to be expected.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1. Password Generator
 
-### `npm run eject`
+In the password generator page, the following settings can be adjusted:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- number of characters;
+- include lowercase characters;
+- include uppercase characters;
+- include numbers;
+- include symbols;
+- characters to exclude;
+- how many passwords.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The password generator can retrieve 10000 passwords with 100 characters at a time.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 2. Memorable Password Generator
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+In the memorable password generator page, the following settings can be adjusted:
 
-## Learn More
+- number of words;
+- separator between words;
+- include numbers.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The memorable password generator can retrieve 1 password with up to 10 words at a time.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 3. SHA-256 Hashing Generator
 
-### Code Splitting
+In the sha-256 hashing generator page, the following settings can be adjusted:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- text to be hashed.
 
-### Analyzing the Bundle Size
+# Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+# Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+@kazimkazam (monsieurkazimkazam@gmail.com). 
 
-### Advanced Configuration
+# References
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Password icons created by Freepik - Flaticon: used to get the page logo
+https://www.flaticon.com/free-icons/password
 
-### Deployment
+2. Random Word API: used to retrieve words to create memorable passwords
+https://random-word-api.herokuapp.com/home
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# License
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT
