@@ -31,21 +31,27 @@ const ContainerMemorablePasswordGenerator = () => {
         const includeNumbersLabel = document.getElementById('includeNumbersLabel');
         includeNumbers ? includeNumbersLabel.style.backgroundColor = '#1572A1' : includeNumbersLabel.style.backgroundColor = 'gray';
 
+        if (memorablePassword.length !==0) {
+            document.getElementById('results').style.display = 'flex';
+        } else {
+            document.getElementById('results').style.display = 'none';
+        };
+
         if (numberWords <= 0 || numberWords > 10) {
             document.getElementById('warning').style.visibility = 'visible';
         } else {
             document.getElementById('warning').style.visibility = 'hidden';
         };
-    }, [ words, dispatch, includeNumbers, numberWords ]);
+    }, [ memorablePassword, words, dispatch, includeNumbers, numberWords ]);
 
     const createMemorablePasswordHandler = () => {
         dispatch(createMemorablePassword());
 
-        if (memorablePassword) {
-            document.getElementById('results').style.display = 'flex';
-        } else {
-            document.getElementById('results').style.display = 'none';
-        };
+        // if (memorablePassword) {
+        //     document.getElementById('results').style.display = 'flex';
+        // } else {
+        //     document.getElementById('results').style.display = 'none';
+        // };
     };
 
     const eventHandler = (event) => {

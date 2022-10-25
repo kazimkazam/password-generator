@@ -20,11 +20,11 @@ const ContainerPasswordGenerator = () => {
     const createPasswordHandler = () => {
         dispatch(createPassword());
 
-        if (passwords) {
-            document.getElementById('results').style.display = 'flex';
-        } else {
-            document.getElementById('results').style.display = 'none';
-        };
+        // if (passwords) {
+        //     document.getElementById('results').style.display = 'flex';
+        // } else {
+        //     document.getElementById('results').style.display = 'none';
+        // };
     };
 
     const eventHandler = (event) => {
@@ -55,12 +55,18 @@ const ContainerPasswordGenerator = () => {
             dispatch(handleAllCheckboxesBackTrue());
         };
 
+        if (passwords.length !== 0) {
+            document.getElementById('results').style.display = 'flex';
+        } else {
+            document.getElementById('results').style.display = 'none';
+        };
+
         if (numberChars <= 0 || numberChars > 100) {
             document.getElementById('warning').style.visibility = 'visible';
         } else {
             document.getElementById('warning').style.visibility = 'hidden';
         };
-    }, [ numberChars, lowercase, uppercase, includeNumbers, includeSymbols, dispatch ]);
+    }, [ passwords, numberChars, lowercase, uppercase, includeNumbers, includeSymbols, dispatch ]);
 
     return(
         <PasswordGenerator

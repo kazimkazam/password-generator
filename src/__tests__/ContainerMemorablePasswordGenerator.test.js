@@ -43,7 +43,7 @@ describe('tests related with Container Memorable Password Generator', () => {
 
         // assert that results div starts with display = none
         let results = await screen.findByTestId('results');
-        expect(results.style.display).toEqual('');
+        expect(results.style.display).toEqual('none');
         
         // fire click on submit button to create memorable password, and change results div style.display to 'flex'
         fireEvent.click(screen.getByTestId('submitButton'));

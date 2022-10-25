@@ -47,7 +47,7 @@ describe('tests related with Container Password Generator', () => {
         );
 
         // assert that results div starts with display = none
-        expect(screen.queryByTestId('results').style.display).toEqual('');
+        expect(screen.queryByTestId('results').style.display).toEqual('none');
 
         // fire click on submit button to create password (1 password since initialState.howMany = 1), and change results div style.display to 'flex'
         fireEvent.click(screen.queryByTestId('submitButton'));
