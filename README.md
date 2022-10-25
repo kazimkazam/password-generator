@@ -77,7 +77,6 @@ In the sha-256 hashing generator page, the following settings can be adjusted:
 ![image](https://user-images.githubusercontent.com/108230645/197826692-bf2d3c5f-9aa7-417f-b503-34be4e0dc21a.png)
 ![image](https://user-images.githubusercontent.com/108230645/197826739-8b3a2b22-ffda-4b41-a0a5-3dc43ba071d5.png)
 ![image](https://user-images.githubusercontent.com/108230645/197826776-f56f50a8-1a53-490b-b9b7-2cab22a12e9e.png)
-![image](https://user-images.githubusercontent.com/108230645/197826813-66ae3a8c-c053-4af0-b67e-72f0348b06ca.png)
 
 # Tests
 
