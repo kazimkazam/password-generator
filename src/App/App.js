@@ -1,6 +1,7 @@
 import './App.css';
 import '../resources/styles/reactComponents.css';
 import '../resources/styles/inputs.css';
+import '../resources/styles/responsiveDesign.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { ContainerHeader } from '../Components/ContainerComponents/ContainerHeader/ContainerHeader';

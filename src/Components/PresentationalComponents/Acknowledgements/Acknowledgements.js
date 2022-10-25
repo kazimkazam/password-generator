@@ -41,6 +41,13 @@ approval or endorsement of the linked web site by us. Use of any such linked web
 
                 <h3>Update</h3>
                 <p>Should we update, amend or make any changes to this document, those changes will be prominently posted here.</p>
+
+                <br></br>
+
+                <h2>Author</h2>
+                <p>@kazimkazam</p>
+                <p>Repository can be found by clicking on the link below.</p>
+                <a href="https://github.com/kazimkazam/password-generator">kazimkazam/password-generator</a>
             </div>
         );
     };

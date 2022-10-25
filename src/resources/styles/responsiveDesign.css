@@ -1,0 +1,211 @@
+@media screen and (prefers-color-scheme: dark) {
+    html {
+        color: white;
+        background-color: #151515;
+    }
+}
+
+@media screen and (prefers-color-scheme: light) {
+    html {
+        color: white;
+        background-color: #151515;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 480px) {
+    html {
+        font-size: 0.7rem;
+    }
+
+    .header nav ul {
+        display: flex;
+    }
+
+    .header nav li {
+        display: flex;
+    }
+
+    .header nav a {
+        letter-spacing: 0rem;
+        text-transform: none;
+        padding: 0.2rem;
+        text-align: center;
+    }
+
+    .logo {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 0.2rem;
+    }
+
+    .title {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+    }
+
+    legend {
+        font-size: 0.7rem;
+    }
+
+    .generator {
+        width: 25rem;
+    }
+
+    table {
+        border-spacing: 0rem;
+    }
+
+    .footer {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .footer a {
+        padding: 0.3rem;
+    }
+
+    .results {
+        margin-top: 0.5rem;
+    }
+    
+    .results div {
+        min-width: 5rem;
+        max-width: 15rem;
+    }
+
+    .results ul li {
+        padding: 0.1rem;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    html {
+        font-size: 1rem;
+    }
+
+    .header nav ul {
+        display: flex;
+    }
+
+    .header nav li {
+        display: flex;
+    }
+
+    .header nav a {
+        letter-spacing: 0.2rem;
+        text-transform: none;
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    .logo {
+        width: 3rem;
+        height: 3rem;
+        margin-right: 0.2rem;
+    }
+
+    .title {
+        font-size: 1.2rem;
+        letter-spacing: 0.2rem;
+    }
+
+    legend {
+        font-size: 1rem;
+    }
+
+    .generator {
+        width: 30rem;
+    }
+
+    table {
+        border-spacing: 1rem;
+    }
+
+    .footer {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .footer a {
+        padding: 0.3rem;
+    }
+
+    .results {
+        margin-top: 1rem;
+    }
+    
+    .results div {
+        min-width: 15rem;
+        max-width: 20rem;
+    }
+
+    .results ul li {
+        padding: 0.1rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    html {
+        font-size: 1.2rem;
+    }
+
+    .header nav ul {
+        display: flex;
+    }
+
+    .header nav li {
+        display: flex;
+    }
+
+    .header nav a {
+        letter-spacing: 0.2rem;
+        text-transform: none;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .logo {
+        width: 3rem;
+        height: 3rem;
+        margin-right: 0.2rem;
+    }
+
+    .title {
+        font-size: 1.2rem;
+        letter-spacing: 0.2rem;
+    }
+
+    legend {
+        font-size: 1.2rem;
+    }
+
+    .generator {
+        width: 40rem;
+    }
+
+    table {
+        border-spacing: 1rem;
+    }
+
+    .footer {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .footer a {
+        padding: 1rem;
+    }
+
+    .results {
+        margin-top: 1rem;
+    }
+    
+    .results div {
+        min-width: 15rem;
+        max-width: 30rem;
+    }
+
+    .results ul li {
+        padding: 0.1rem;
+    }
+}

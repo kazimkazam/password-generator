@@ -136,14 +136,14 @@ tr, td {
 /* ------------------------------------- */
 /* results */
 
-.results {
+#results {
     margin-top: 2rem;
     display: none;
     justify-content: center;
     align-items: center;
 }
 
-.results div {
+#results div {
     background-color: black;
     color: white;
     border-radius: 0.5rem;
@@ -156,11 +156,11 @@ tr, td {
     justify-content: center;
 }
 
-.results ul {
+#results ul {
     list-style: square;
     /* margin-right: 1.7rem; */
 }
 
-.results ul li {
+#results ul li {
     padding: 0.5rem;
 }
