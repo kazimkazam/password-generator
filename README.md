@@ -73,6 +73,7 @@ In the sha-256 hashing generator page, the following settings can be adjusted:
 # Screenshots
 
 
+
 # Author
 
 @kazimkazam (monsieurkazimkazam@gmail.com). 

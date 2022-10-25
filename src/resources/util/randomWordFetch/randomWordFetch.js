@@ -3,9 +3,9 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios  from 'axios';
 
 const randomWordFetch = createAsyncThunk('memorablePassword/fetchWord', async () => {
-    // const response = await fetch('https://random-word-api.herokuapp.com/all')
-    // .then(response => response.json())
-    // return response;
+//     // const response = await fetch('https://random-word-api.herokuapp.com/all')
+//     // .then(response => response.json())
+//     // return response;
 
     const response = await axios.get('https://random-word-api.herokuapp.com/all');
     return response.data;

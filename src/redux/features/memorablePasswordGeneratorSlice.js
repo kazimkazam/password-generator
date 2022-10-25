@@ -11,6 +11,13 @@ export const memorablePasswordGeneratorSlice = createSlice({
         memorablePassword: [],
         fetchStatus: 'idle',
         errorStatus: null,
+        
+        // ------------------------
+        // when testing
+        // words: [ [
+        //     "agouties","agoutis","agouty","agrafe","agrafes","agraffe","agraffes","agranulocyte","agranulocytes",
+        // "agranulocytoses","agranulocytosis","agrapha","agraphia","agraphias","agraphic","agrarian","agrarianism"
+        // ], [] ],
     },
     reducers: {
         createMemorablePassword: (state, action) => {

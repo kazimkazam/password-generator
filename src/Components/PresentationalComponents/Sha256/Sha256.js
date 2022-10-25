@@ -9,7 +9,7 @@ const Sha256 = (props) => {
                         <tbody>
                             <tr>
                                 <td><label>Text to be hashed:</label></td>
-                                <td><textarea type={ 'text' } name={ 'textToBeHashed' } rows='5' cols='50' style={ { borderColor: props.color } } onChange={ props.onChange } /></td>
+                                <td><textarea type={ 'text' } name={ 'textToBeHashed' } rows='5' cols='50' style={ { borderColor: props.color } } onChange={ props.onChange } data-testid={ 'textToBeHashed' } /></td>
                             </tr>
                         </tbody>
                     </table>
@@ -17,10 +17,10 @@ const Sha256 = (props) => {
             </div>
 
             <div className={ 'submitButton' } >
-                <button onClick={ props.onClick } >Create hash</button>
+                <button onClick={ props.onClick } data-testid={ 'submitButton' } >Create hash</button>
             </div>
 
-            <div className={ 'results' } id={ 'results' } >
+            <div className={ 'results' } id={ 'results' } data-testid={ 'results' } >
                 <div style={ { borderColor: props.color } } >
                     <ul>
                         <li key={ props.hash } >{ props.hash }</li>
