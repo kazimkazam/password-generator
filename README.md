@@ -6,11 +6,12 @@ This application is based on react-redux and it delivers a single page applicati
 - A memorable password generator application;
 - A SHA-256 Hashing generator aplication.
 
-# Table of Contents
+# Table Of Contents
 - Development;
 - How to use;
 - Screenshots;
 - Tests;
+- Improvements to be implemented;
 - Author;
 - References;
 - License.
@@ -31,7 +32,7 @@ The memorable password generator fetches a "dictionary" of words from (https://r
 
 In order to keep the application state as "clean" as possible and to help it run faster and smoother, every time a tab is selected (also acknowledgements), the state resets to the initial state.
 
-# How to use
+# How To Use
 
 The SPA consists of 3 main pages, which can be accessed using the navigation tabs, and are the following:
 - A password generator application;
@@ -91,6 +92,18 @@ Only the main containers, i.e., with the main functional code, were tested.
 To make the app ~100% fully tested, header and footer container should be tested. These containers have, apart from other code, code related with how the app "behaves" visually, i.e., colors in the nav and main div. 
 
 ![image](https://user-images.githubusercontent.com/108230645/197827073-77c73ae1-d1ac-4bb8-b049-99be84b2e7d5.png)
+
+# Improvements To Be Implemented
+
+### Memorable Password State 
+
+At the moment, the application fetches a full dictionary to be used on the memorable password functionality, and while that window is active, the state of the application is quite heavy (may lead application to take more than 130ms to complete other actions).
+
+One possible immediate solutions is, since the dictionary is so big, to save only part of it after each fetch, i.e., save , e.g., 1000 words picked randomly, which will be more than enough (Solution quite easy to implement, 15-20 min implementation).
+
+### Responsive Design CSS
+
+The application has implemented just some basic responsive design using CSS, i.e., some of the main screen breakpoints were considered and some very short tests were completed. In that perspective, more tests need to be performed in order to improve the respective CSS file, and the application in that sense.
 
 # Author
 
