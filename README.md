@@ -18,8 +18,6 @@ This application is based on react-redux and it delivers a single page applicati
 # Development
 The SPA was coded by making use of the React library. To access the application state, Redux was used.
 
-For the purpose of showing the diference, the Password Generator page container was also developed not using redux (but the Redux-based component is the one "active" in the project), but using only the this. and props from React to interact between the container and the presentational components.
-
 The application is running on:
 - React 18.2.0
 - react-redux 8.0.4
@@ -81,6 +79,10 @@ In the sha-256 hashing generator page, the following settings can be adjusted:
 # Tests
 
 Tests were conducted using React Testing Library.
+
+- @testing-library/jest-dom": "^5.16.5"
+- @testing-library/react": "^13.4.0"
+- @testing-library/user-event": "^14.4.3"
 
 Only the main containers, i.e., with the main functional code, were tested.
 
