@@ -17,13 +17,15 @@ This application is based on react-redux and it delivers a single page applicati
 
 # Development
 The SPA was coded by making use of the React library. To access the application state, Redux was used.
+Additionally, React router was implemented.
 
 The application is running on:
-- React 18.2.0
+- react 18.2.0
+- react-router-dom 6.4.2
 - react-redux 8.0.4
 - @reduxjs/toolkit 1.8.5
 - redux-thunk 2.4.1
-- Axios 1.1.2
+- axios 1.1.2
 
 The memorable password generator fetches a "dictionary" of words from (https://random-word-api.herokuapp.com/home) whenever the page is loaded, and then the words to form the password are randomly chosen.
 
