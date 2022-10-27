@@ -103,7 +103,7 @@ One possible immediate solutions is, since the dictionary is so big, to save onl
 
 ### Responsive Design CSS
 
-The application has implemented just some basic responsive design using CSS, i.e., some of the main screen breakpoints were considered and some very short tests were completed. In that perspective, more tests need to be performed in order to improve the respective CSS file, and the application in that sense.
+The application has implemented just some basic responsive design using CSS, i.e., some of the main screen breakpoints were considered and some very basic/short tests were completed. In that perspective, more tests need to be performed in order to improve the respective CSS file, and make the application work 100% in that sense.
 
 # Author
 
