@@ -17,7 +17,6 @@ const randomWordFetch = createAsyncThunk('memorablePassword/fetchWord', async ()
         responseData.push(data[randomIdx]);
     };
 
-    console.log(responseData);
     return responseData;
     
     // return response.data;
