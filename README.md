@@ -95,15 +95,9 @@ To make the app ~100% fully tested, header and footer container should be tested
 
 # Improvements To Be Implemented
 
-### Memorable Password State 
-
-At the moment, the application fetches a full dictionary to be used on the memorable password functionality, and while that window is active, the state of the application is quite heavy (may lead application to take more than 130ms to complete other actions).
-
-One possible immediate solutions is, since the dictionary is so big, to save only part of it after each fetch, i.e., save , e.g., 1000 words picked randomly, which will be more than enough (Solution quite easy to implement, 15-20 min implementation).
-
 ### Responsive Design CSS
 
-The application has implemented just some basic responsive design using CSS, i.e., some of the main screen breakpoints were considered and some very basic/short tests were completed. In that perspective, more tests need to be performed in order to improve the respective CSS file, and make the application work 100% in that sense.
+The application has implemented just some very basic responsive design using CSS, i.e., some of the main screen breakpoints were considered and some really short tests were completed. In that perspective, the application should be improved in that matter in order to make it work 100% in that sense.
 
 # Author
 

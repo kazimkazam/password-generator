@@ -8,7 +8,19 @@ const randomWordFetch = createAsyncThunk('memorablePassword/fetchWord', async ()
 //     // return response;
 
     const response = await axios.get('https://random-word-api.herokuapp.com/all');
-    return response.data;
+
+    const data = response.data;
+
+    const responseData = [];
+    for (let k = 0; k < 1000; k++) {
+        const randomIdx = Math.floor(Math.random() * data.length);
+        responseData.push(data[randomIdx]);
+    };
+
+    console.log(responseData);
+    return responseData;
+    
+    // return response.data;
 });
 
 // -------------------------------------------------------------------------------------------
