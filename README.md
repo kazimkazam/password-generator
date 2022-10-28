@@ -97,7 +97,9 @@ To make the app ~100% fully tested, header and footer container should be tested
 
 ### Responsive Design CSS
 
-The application has implemented just some very basic responsive design using CSS, i.e., some of the main screen breakpoints were considered and some really short tests were completed. In that perspective, the application should be improved in that matter in order to make it work 100% in that sense.
+The application has not yet been planned on how it should look on every screen size. So far, just planned how it should look on PC / Desktop.
+
+However, at the moment it has been implemented just some very basic responsive design using CSS, i.e., some of the main screen breakpoints were considered and some really short tests were completed. In that perspective, the application should definitely be improved in that matter.
 
 # Author
 
