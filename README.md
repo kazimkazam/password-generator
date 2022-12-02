@@ -1,7 +1,7 @@
 
 # Password Generator
 
-The application is available on the link below:
+The application was deployed and can be accessed through the link below:
 
 ## https://kazimkazam--password-generator.stormkit.dev
 
