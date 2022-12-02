@@ -1,6 +1,10 @@
 
 # Password Generator
 
+The application is available on the link below:
+
+## https://kazimkazam--password-generator.stormkit.dev
+
 This application is based on react-redux and it delivers a single page application (SPA) that consists of the following 3 main tabs:
 - A password generator application;
 - A memorable password generator application;
