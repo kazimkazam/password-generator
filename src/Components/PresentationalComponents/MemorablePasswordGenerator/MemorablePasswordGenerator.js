@@ -9,7 +9,7 @@ const MemorablePasswordGenerator = (props) => {
                         <tbody>
                             <tr>
                                 <td><label>Number of words (max: 10):</label></td>
-                                <td><p id="warning" style={ { color: props.color } } >Please insert a number between 1 and 10.</p></td>
+                                <td><p id="warning" style={ { color: props.color } } >Please insert a number between 1 and 15.</p></td>
                                 <td><input type={ 'number' } name={ 'numberWords' } defaultValue={ 3 } style={ { borderColor: props.color } } onChange={ props.onChange } data-testid={ 'numberWords' } /></td>
                             </tr>
                             <tr>

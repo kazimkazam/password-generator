@@ -1,6 +1,6 @@
 import { MemorablePasswordGenerator } from '../../PresentationalComponents/MemorablePasswordGenerator/MemorablePasswordGenerator';
 import { useSelector, useDispatch } from 'react-redux';
-import { createMemorablePassword, handleChange, handleCheckboxChange } from '../../../redux/features/memorablePasswordGeneratorSlice';
+import { createMemorablePassword, handleChange, handleCheckboxChange, getWords } from '../../../redux/features/memorablePasswordGeneratorSlice';
 import { selectMemorablePassword, selectMemorablePasswordNumberWords, selectMemorablePasswordWords, selectMemorablePasswordIncludeNumbers } from '../../../redux/features/memorablePasswordGeneratorSlice';
 import { selectSettingsColor } from '../../../redux/features/colorSlice';
 import { useEffect } from 'react';
@@ -24,9 +24,10 @@ const ContainerMemorablePasswordGenerator = () => {
     // ----------------------------------------
 
     useEffect(() => {
-        if (words.length === 0) {
-            dispatch(randomWordFetch());
-        };
+        // when using random word api (now down ---> heroku)
+        // if (words.length === 0) {
+        //     dispatch(randomWordFetch());
+        // };
 
         const includeNumbersLabel = document.getElementById('includeNumbersLabel');
         includeNumbers ? includeNumbersLabel.style.backgroundColor = '#1572A1' : includeNumbersLabel.style.backgroundColor = 'gray';
@@ -37,7 +38,7 @@ const ContainerMemorablePasswordGenerator = () => {
             document.getElementById('results').style.display = 'none';
         };
 
-        if (numberWords <= 0 || numberWords > 10) {
+        if (numberWords <= 0 || numberWords > 15) {
             document.getElementById('warning').style.visibility = 'visible';
         } else {
             document.getElementById('warning').style.visibility = 'hidden';

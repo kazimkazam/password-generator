@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { randomWordFetch } from '../../resources/util/randomWordFetch/randomWordFetch';
+var randomWords = require('random-words');
 
 export const memorablePasswordGeneratorSlice = createSlice({
     name: 'memorablePassword',
@@ -22,15 +23,28 @@ export const memorablePasswordGeneratorSlice = createSlice({
     reducers: {
         createMemorablePassword: (state, action) => {
             state.memorablePassword = [];
+            state.words = [];
 
-            let password = [];
-            const numberWords = state.numberWords < 10 ? state.numberWords : 10;
-            for (let k = 0; k < numberWords; k++) {
-                const randomIdx = Math.floor(Math.random() * state.words[0].length);
-                password.push(state.words[0][randomIdx]);
-            };
+            const numberWords = state.numberWords < 15 ? state.numberWords : 15;
+            const words = randomWords(Number(numberWords))
 
-            password = password.join(state.separator);
+            state.words.push(words);
+
+            // ------------------------------
+            // choose random word (when fetching from random word api) 
+            // fetch api is down ---> heroku
+
+            // let password = [];
+            // const numberWords = state.numberWords < 10 ? state.numberWords : 10;
+            // for (let k = 0; k < numberWords; k++) {
+            //     const randomIdx = Math.floor(Math.random() * state.words[0].length);
+            //     password.push(state.words[0][randomIdx]);
+            // };
+
+            // password = password.join(state.separator);
+            // -----------------------------
+
+            let password = state.words[0].join(state.separator);
 
             if (state.includeNumbers) {
                 password = password.replace(new RegExp('a', 'g'), '4');
@@ -72,6 +86,12 @@ export const memorablePasswordGeneratorSlice = createSlice({
             state[action.payload.target.name] =  value;
         },
 
+        getWords: (state) => {
+            const words = randomWords(state.numberWords);
+
+            state.words.push(words);
+        },
+
         resetMemorablePasswordStates: (state) => {
             state.numberWords = 3;
             state.includeNumbers = true;
@@ -98,7 +118,7 @@ export const memorablePasswordGeneratorSlice = createSlice({
     },
 });
 
-export const { createMemorablePassword, handleChange, handleCheckboxChange, resetMemorablePasswordStates } = memorablePasswordGeneratorSlice.actions;
+export const { createMemorablePassword, handleChange, handleCheckboxChange, getWords, resetMemorablePasswordStates } = memorablePasswordGeneratorSlice.actions;
 
 export const selectMemorablePassword = (state) => state.memorablePassword.memorablePassword;
 export const selectMemorablePasswordNumberWords = (state) => state.memorablePassword.numberWords;

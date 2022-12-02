@@ -7,7 +7,7 @@ class Acknowledgements extends React.Component {
                 <h2>Acknowledgements</h2>
                 <ul>
                     <li><a href="https://www.flaticon.com/free-icons/password" title="password icons">Password icons created by Freepik - Flaticon</a></li>
-                    <li><a href="https://random-word-api.herokuapp.com/home" title="random word fetch">Random Word API</a></li>
+                    {/* <li><a href="https://random-word-api.herokuapp.com/home" title="random word fetch">Random Word API</a></li> */}
                 </ul>
 
                 <br></br>

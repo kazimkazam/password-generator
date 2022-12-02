@@ -28,7 +28,9 @@ The application is running on:
 - redux-thunk 2.4.1
 - axios 1.1.2
 
-The memorable password generator fetches a "dictionary" of words from (https://random-word-api.herokuapp.com/home) whenever the page is loaded, and then the words to form the password are randomly chosen.
+Initially, the memorable password generator page was fetching a "dictionary" of words from (https://random-word-api.herokuapp.com/home) whenever page was loaded, and then the words to form the password are randomly chosen.
+
+At the moment, since (https://random-word-api.herokuapp.com/home) is down, the page is using the random-words module (https://www.npmjs.com/package/random-words).
 
 In order to keep the application state as "clean" as possible and to help it run faster and smoother, every time a tab is selected (also acknowledgements), the state resets to the initial state.
 
@@ -109,9 +111,6 @@ However, at the moment it has been implemented just some very basic responsive d
 
 1. Password icons created by Freepik - Flaticon: used to get the page logo
 https://www.flaticon.com/free-icons/password
-
-2. Random Word API: used to retrieve words to create memorable passwords
-https://random-word-api.herokuapp.com/home
 
 # License
 
