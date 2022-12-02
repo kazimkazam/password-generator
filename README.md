@@ -28,9 +28,9 @@ The application is running on:
 - redux-thunk 2.4.1
 - axios 1.1.2
 
-Initially, the memorable password generator page was fetching a "dictionary" of words from (https://random-word-api.herokuapp.com/home) whenever page was loaded, and then the words to form the password are randomly chosen.
+Initially, the memorable password generator page was fetching a "dictionary" of words from (https://random-word-api.herokuapp.com/home) whenever the page was loaded, and then the words to form the password were randomly chosen.
 
-At the moment, since (https://random-word-api.herokuapp.com/home) is down, the page is using the random-words module (https://www.npmjs.com/package/random-words).
+At the moment, since (https://random-word-api.herokuapp.com/home) is down, the page is using the random-words module (https://www.npmjs.com/package/random-words). This change, actually made the application work smoother as it resulted in a lighter solution.
 
 In order to keep the application state as "clean" as possible and to help it run faster and smoother, every time a tab is selected (also acknowledgements), the state resets to the initial state.
 
