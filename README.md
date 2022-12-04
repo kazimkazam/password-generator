@@ -11,14 +11,14 @@ This application is based on react-redux and it delivers a single page applicati
 - A SHA-256 Hashing generator aplication.
 
 # Table Of Contents
-- Development;
-- How to use;
-- Screenshots;
-- Tests;
-- Improvements to be implemented;
-- Author;
-- References;
-- License.
+- [Development](#development);
+- [How to Use](#how-to-use);
+- [Screenshots](#screenshots);
+- [Tests](#tests);
+- [Improvements to be implemented](#improvements-to-be-implemented);
+- [Author](#author);
+- [References](#references);
+- [License](#license).
 
 # Development
 The SPA was coded by making use of the React library. To access the application state, Redux was used.
