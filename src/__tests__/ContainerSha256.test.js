@@ -39,13 +39,14 @@ describe('tests related with Container SHA-256 Hashing', () => {
         await waitFor(() => expect(screen.getByTestId('textToBeHashed')).toHaveValue('test'));
 
         let sha256State = store.getState().sha256Hashing;
-        await waitFor(() => expect(sha256State.textToBeHashed).toEqual('test'));
+        expect(sha256State.textToBeHashed).toEqual('test');
         
+        // for this work, check sha256Hashing.js file at /util/sha256Hashing
         // verify that state now stores hashed text
-        await waitFor(() => expect(sha256State.hash).toEqual('9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08')); 
+        expect(sha256State.hash).toEqual('9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08'); 
 
         // fire click on submit button
-        await waitFor(() => userEvent.click(screen.getByTestId('submitButton')));
+        userEvent.click(screen.getByTestId('submitButton'));
         
         // verify results are now showing
         await waitFor(() => expect(screen.getByTestId('results').style.display).toEqual('flex'));

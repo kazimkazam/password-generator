@@ -43,95 +43,95 @@ describe('tests related with Container Password Generator', () => {
         expect(screen.queryByTestId('howMany').value).toEqual('1');
     });
 
-    it('should create a number of passwords after an onClick event', async () => {
+    it('should create a number of passwords after an onClick event', () => {
         // assert that results div starts with display = none
         expect(screen.queryByTestId('results').style.display).toEqual('none');
 
         // fire click on submit button to create password (1 password since initialState.howMany = 1), and change results div style.display to 'flex'
-        await waitFor(() => fireEvent.click(screen.queryByTestId('submitButton')));
+        fireEvent.click(screen.queryByTestId('submitButton'));
         let passwordGeneratorState = store.getState().passwordGenerator;
         
-        await waitFor(() => expect(screen.queryByTestId('results').style.display).toEqual('flex'));
-        await waitFor(() => expect(passwordGeneratorState.passwords.length).toEqual(passwordGeneratorState.howMany));
+        expect(screen.queryByTestId('results').style.display).toEqual('flex');
+        expect(passwordGeneratorState.passwords.length).toEqual(passwordGeneratorState.howMany);
     });
 
-    it('should handle changes made by user inputs into the store state', async () => {
+    it('should handle changes made by user inputs into the store state', () => {
         // number chars number input
-        await waitFor(() => fireEvent.change(screen.queryByTestId('numberChars'), { target: { value: 5 } } ));
+        fireEvent.change(screen.queryByTestId('numberChars'), { target: { value: 5 } } );
         let passwordGeneratorState = store.getState().passwordGenerator;
-        await waitFor(() => expect(passwordGeneratorState.numberChars).toEqual('5'));
+        expect(passwordGeneratorState.numberChars).toEqual('5');
 
-        await waitFor(() => fireEvent.change(screen.queryByTestId('numberChars'), { target: { value: 10 } } ));
+        fireEvent.change(screen.queryByTestId('numberChars'), { target: { value: 10 } } );
         passwordGeneratorState = store.getState().passwordGenerator;
-        await waitFor(() => expect(passwordGeneratorState.numberChars).toEqual('10'));
+        expect(passwordGeneratorState.numberChars).toEqual('10');
         
         // lowercase checkbox
-        await waitFor(() => fireEvent.click(screen.queryByTestId('lowercase')));
+        fireEvent.click(screen.queryByTestId('lowercase'));
         passwordGeneratorState = store.getState().passwordGenerator;
-        await waitFor(() => expect(passwordGeneratorState.lowercase).toEqual(false));
+        expect(passwordGeneratorState.lowercase).toEqual(false);
 
-        await waitFor(() => fireEvent.click(screen.queryByTestId('lowercase')));
+        fireEvent.click(screen.queryByTestId('lowercase'));
         passwordGeneratorState = store.getState().passwordGenerator;
-        await waitFor(() => expect(passwordGeneratorState.lowercase).toEqual(true));
+        expect(passwordGeneratorState.lowercase).toEqual(true);
 
         // uppercase checkbox
-        await waitFor(() => fireEvent.click(screen.queryByTestId('uppercase')));
+        fireEvent.click(screen.queryByTestId('uppercase'));
         passwordGeneratorState = store.getState().passwordGenerator;
-        await waitFor(() => expect(passwordGeneratorState.uppercase).toEqual(false));
+        expect(passwordGeneratorState.uppercase).toEqual(false);
 
-        await waitFor(() => fireEvent.click(screen.queryByTestId('uppercase')));
+        fireEvent.click(screen.queryByTestId('uppercase'));
         passwordGeneratorState = store.getState().passwordGenerator;
-        await waitFor(() => expect(passwordGeneratorState.uppercase).toEqual(true));
+        expect(passwordGeneratorState.uppercase).toEqual(true);
 
         // includeNumbers checkbox
-        await waitFor(() => fireEvent.click(screen.queryByTestId('includeNumbers')));
+        fireEvent.click(screen.queryByTestId('includeNumbers'));
         passwordGeneratorState = store.getState().passwordGenerator;
-        await waitFor(() => expect(passwordGeneratorState.includeNumbers).toEqual(false));
+        expect(passwordGeneratorState.includeNumbers).toEqual(false);
 
-        await waitFor(() => fireEvent.click(screen.queryByTestId('includeNumbers')));
+        fireEvent.click(screen.queryByTestId('includeNumbers'));
         passwordGeneratorState = store.getState().passwordGenerator;
-        await waitFor(() => expect(passwordGeneratorState.includeNumbers).toEqual(true));
+        expect(passwordGeneratorState.includeNumbers).toEqual(true);
 
         // includeSymbols checkbox
-        await waitFor(() => fireEvent.click(screen.queryByTestId('includeSymbols')));
+        fireEvent.click(screen.queryByTestId('includeSymbols'));
         passwordGeneratorState = store.getState().passwordGenerator;
-        await waitFor(() => expect(passwordGeneratorState.includeSymbols).toEqual(false));
+        expect(passwordGeneratorState.includeSymbols).toEqual(false);
 
-        await waitFor(() => fireEvent.click(screen.queryByTestId('includeSymbols')));
+        fireEvent.click(screen.queryByTestId('includeSymbols'));
         passwordGeneratorState = store.getState().passwordGenerator;
-        await waitFor(() => expect(passwordGeneratorState.includeSymbols).toEqual(true));
+        expect(passwordGeneratorState.includeSymbols).toEqual(true);
 
         // chars to exclude text input
-        await waitFor(() => fireEvent.change(screen.queryByTestId('charsToExclude'), { target: { value: '_/+' } }));
+        fireEvent.change(screen.queryByTestId('charsToExclude'), { target: { value: '_/+' } });
         passwordGeneratorState = store.getState().passwordGenerator;
-        await waitFor(() => expect(passwordGeneratorState.charsToExclude).toEqual('_/+'));
+        expect(passwordGeneratorState.charsToExclude).toEqual('_/+');
 
-        await waitFor(() => fireEvent.change(screen.queryByTestId('charsToExclude'), { target: { value: '' } }));
+        fireEvent.change(screen.queryByTestId('charsToExclude'), { target: { value: '' } });
         passwordGeneratorState = store.getState().passwordGenerator;
-        await waitFor(() => expect(passwordGeneratorState.charsToExclude).toEqual(''));
+        expect(passwordGeneratorState.charsToExclude).toEqual('');
 
         // how many passwords select input
-        await waitFor(() => fireEvent.change(screen.queryByTestId('howMany'), { target: { value: 10 } }));
+        fireEvent.change(screen.queryByTestId('howMany'), { target: { value: 10 } });
         passwordGeneratorState = store.getState().passwordGenerator;
-        await waitFor(() => expect(passwordGeneratorState.howMany).toEqual('10'));
+        expect(passwordGeneratorState.howMany).toEqual('10');
 
-        await waitFor(() => fireEvent.change(screen.queryByTestId('howMany'), { target: { value: 1 } }));
+        fireEvent.change(screen.queryByTestId('howMany'), { target: { value: 1 } });
         passwordGeneratorState = store.getState().passwordGenerator;
-        await waitFor(() => expect(passwordGeneratorState.howMany).toEqual('1'));
+        expect(passwordGeneratorState.howMany).toEqual('1');
     });
 
     it('should turn all checkboxes back true when user changes all to false', async () => {
         // lowercase checkbox
-        await waitFor(() => fireEvent.click(screen.queryByTestId('lowercase')));
+        fireEvent.click(screen.queryByTestId('lowercase'));
 
         // uppercase checkbox
-        await waitFor(() => fireEvent.click(screen.queryByTestId('uppercase')));
+        fireEvent.click(screen.queryByTestId('uppercase'));
 
         // includeNumbers checkbox
-        await waitFor(() => fireEvent.click(screen.queryByTestId('includeNumbers')));
+        fireEvent.click(screen.queryByTestId('includeNumbers'));
 
         // includeSymbols checkbox
-        await waitFor(() => fireEvent.click(screen.queryByTestId('includeSymbols')));
+        fireEvent.click(screen.queryByTestId('includeSymbols'));
 
         let passwordGeneratorState = store.getState().passwordGenerator;
 
@@ -142,7 +142,7 @@ describe('tests related with Container Password Generator', () => {
     });
 
     it('should create a password considering the settings', async () => {
-        await waitFor(() => fireEvent.click(screen.queryByTestId('submitButton')));
+        fireEvent.click(screen.queryByTestId('submitButton'));
 
         let passwordGeneratorState = store.getState().passwordGenerator;
         await waitFor(() => expect(passwordGeneratorState.passwords.length).toEqual(1));
@@ -150,14 +150,14 @@ describe('tests related with Container Password Generator', () => {
         const password = passwordGeneratorState.passwords;
         
         let validPassword = true;
-        const validatePassword = async () => {
+        const validatePassword = () => {
             let pattern = /[\S_]{10}/g;
             if (!pattern.test(password)) {
                 validPassword = false;
             };
         };
 
-        await waitFor(() => validatePassword());
-        await waitFor(() => expect(validPassword).toEqual(true));
+        validatePassword();
+        expect(validPassword).toEqual(true);
     });
 });

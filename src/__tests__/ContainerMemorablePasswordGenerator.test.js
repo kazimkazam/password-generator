@@ -43,7 +43,7 @@ describe('tests related with Container Memorable Password Generator', () => {
         expect(results.style.display).toEqual('none');
         
         // fire click on submit button to create memorable password, and change results div style.display to 'flex'
-        await waitFor(() => fireEvent.click(screen.getByTestId('submitButton')));
+        fireEvent.click(screen.getByTestId('submitButton'));
         
         results = await screen.findByTestId('results');
         await waitFor(() => expect(results.style.display).toEqual('flex'));
@@ -52,32 +52,32 @@ describe('tests related with Container Memorable Password Generator', () => {
         await waitFor(() => expect(memorablePasswordGeneratorState.memorablePassword.length).toEqual(1));
     });
 
-    it('should handle changes made by user inputs into the store state', async () => {
+    it('should handle changes made by user inputs into the store state', () => {
         // number words number input
-        await waitFor(() => fireEvent.change(screen.queryByTestId('numberWords'), { target: { value: 5 } } ));
+        fireEvent.change(screen.queryByTestId('numberWords'), { target: { value: 5 } } );
         let memorablePasswordGeneratorState = store.getState().memorablePassword;
-        await waitFor(() => expect(memorablePasswordGeneratorState.numberWords).toEqual('5'));
+        expect(memorablePasswordGeneratorState.numberWords).toEqual('5');
 
-        await waitFor(() => fireEvent.change(screen.queryByTestId('numberWords'), { target: { value: 3 } } ));
+        fireEvent.change(screen.queryByTestId('numberWords'), { target: { value: 3 } } );
         memorablePasswordGeneratorState = store.getState().memorablePassword;
-        await waitFor(() => expect(memorablePasswordGeneratorState.numberWords).toEqual('3'));
+        expect(memorablePasswordGeneratorState.numberWords).toEqual('3');
 
         // separator text input
-        await waitFor(() => fireEvent.change(screen.queryByTestId('separator'), { target: { value: '_/' } }));
+        fireEvent.change(screen.queryByTestId('separator'), { target: { value: '_/' } });
         memorablePasswordGeneratorState = store.getState().memorablePassword;
-        await waitFor(() => expect(memorablePasswordGeneratorState.separator).toEqual('_/'));
+        expect(memorablePasswordGeneratorState.separator).toEqual('_/');
 
-        await waitFor(() => fireEvent.change(screen.queryByTestId('separator'), { target: { value: '' } }));
+        fireEvent.change(screen.queryByTestId('separator'), { target: { value: '' } });
         memorablePasswordGeneratorState = store.getState().memorablePassword;
-        await waitFor(() => expect(memorablePasswordGeneratorState.separator).toEqual(''));
+        expect(memorablePasswordGeneratorState.separator).toEqual('');
 
         // includeNumbers checkbox input
-        await waitFor(() => fireEvent.click(screen.queryByTestId('includeNumbers')));
+        fireEvent.click(screen.queryByTestId('includeNumbers'));
         memorablePasswordGeneratorState = store.getState().memorablePassword;
-        await waitFor(() => expect(memorablePasswordGeneratorState.includeNumbers).toEqual(false));
+        expect(memorablePasswordGeneratorState.includeNumbers).toEqual(false);
 
-        await waitFor(() => fireEvent.click(screen.queryByTestId('includeNumbers')));
+        fireEvent.click(screen.queryByTestId('includeNumbers'));
         memorablePasswordGeneratorState = store.getState().memorablePassword;
-        await waitFor(() => expect(memorablePasswordGeneratorState.includeNumbers).toEqual(true));
+        expect(memorablePasswordGeneratorState.includeNumbers).toEqual(true);
     });
 });
