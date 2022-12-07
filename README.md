@@ -97,7 +97,7 @@ Only the main containers, i.e., with the main functional code, were tested.
 
 To make the app ~100% fully tested, header and footer container should be tested. These containers have, apart from other code, code related with how the app "behaves" visually, i.e., colors in the nav and main div. 
 
-![image](https://user-images.githubusercontent.com/108230645/197827073-77c73ae1-d1ac-4bb8-b049-99be84b2e7d5.png)
+![image](https://github.com/kazimkazam/password-generator/blob/master/screenshots/tests.png?raw=true)
 
 # Improvements To Be Implemented
 
