@@ -109,12 +109,11 @@ However, at the moment it has been implemented just some very basic responsive d
 
 # Author
 
-@kazimkazam (monsieurkazimkazam@gmail.com). 
+[@kazimkazam](https://github.com/kazimkazam) (monsieurkazimkazam@gmail.com).
 
 # References
 
-1. Password icons created by Freepik - Flaticon: used to get the page logo
-https://www.flaticon.com/free-icons/password
+- Password icons created by Freepik - Flaticon: used to get the page logo (https://www.flaticon.com/free-icons/password)
 
 # License
 
