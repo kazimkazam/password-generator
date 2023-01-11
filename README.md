@@ -3,7 +3,7 @@
 
 The application is deployed and can be accessed through the link below:
 
-## https://kazimkazam--password-generator.stormkit.dev
+## https://kazimkazam-password-generator.netlify.app
 
 This application is based on react-redux and it delivers a single page application (SPA) that consists of the following 3 main tabs:
 - A password generator application;
