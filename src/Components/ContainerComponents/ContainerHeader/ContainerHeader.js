@@ -41,7 +41,7 @@ const ContainerHeader = () => {
             document.getElementById('includeNumbers').checked = true;
         };
         // sha256 page
-        if (document.getElementById('textToBeHashed' !== null)) {
+        if (document.getElementById('textToBeHashed') !== null) {
             document.getElementById('textToBeHashed').value = '';
         };
     };
