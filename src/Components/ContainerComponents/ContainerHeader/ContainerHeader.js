@@ -28,16 +28,16 @@ const ContainerHeader = () => {
         if (passwordTab && !memorableTab && !shaTab) {
             // ensure that client is showing the right page ---> when the user reloads or types url manually
             // since colorState initialState starts with password generator color, we need to verify the page where user is in when he reloads or inserts url manually 
-            if (document.getElementById('numberChars') === undefined) {
+            if (document.getElementById('numberChars') === null) {
                 if (document.getElementById('numberWords')) {
                     navigate('/memorablepassword');
-                    dispatch(handleChange('memorableNav'))
+                    dispatch(handleChange({ target: { name: 'memorableNav' } }))
                 } else if (document.getElementById('textToBeHashed')) {
                     navigate('/sha256');
-                    dispatch(handleChange('shaNav'));
+                    dispatch(handleChange({ target: { name: 'shaNav' } }));
                 } else {
                     navigate('/acknowledgements');
-                    dispatch(handleChange('acknowledgements'))
+                    dispatch(handleChange({ target: { name: 'acknowledgements' } }));
                 }
             };
             
