@@ -11,7 +11,7 @@ const PasswordGenerator = (props) => {
                                 
                                 <td><label>Number of characters (max: 100):</label></td>
                                 <td><p id="warning" style={ { color: props.color } } >Please insert a number between 1 and 100.</p></td>
-                                <td><input type={ 'number' } name={ 'numberChars' } defaultValue={ 10 } style={ { borderColor: props.color } } onChange={ props.onChange } data-testid={ 'numberChars' } /></td>
+                                <td><input type={ 'number' } id={ 'numberChars' } name={ 'numberChars' } defaultValue={ 10 } style={ { borderColor: props.color } } onChange={ props.onChange } data-testid={ 'numberChars' } /></td>
                             </tr>
                             <tr>
                                 <td><label>Include lowercase (e.g. abcdef):</label></td>

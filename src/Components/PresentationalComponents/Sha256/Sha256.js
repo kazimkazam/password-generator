@@ -9,7 +9,7 @@ const Sha256 = (props) => {
                         <tbody>
                             <tr>
                                 <td><label>Text to be hashed:</label></td>
-                                <td><textarea type={ 'text' } name={ 'textToBeHashed' } rows='5' cols='50' style={ { borderColor: props.color } } onChange={ props.onChange } data-testid={ 'textToBeHashed' } /></td>
+                                <td><textarea type={ 'text' } id={ 'textToBeHashed' } name={ 'textToBeHashed' } rows='5' cols='50' style={ { borderColor: props.color } } onChange={ props.onChange } data-testid={ 'textToBeHashed' } /></td>
                             </tr>
                         </tbody>
                     </table>

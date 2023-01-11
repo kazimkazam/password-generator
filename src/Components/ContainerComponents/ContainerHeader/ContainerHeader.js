@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { handleChange } from "../../../redux/features/colorSlice";
 import { selectPasswordTab, selectMemorableTab, selectShaTab } from "../../../redux/features/colorSlice";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ContainerHeader = () => {
     const passwordTab = useSelector(selectPasswordTab);
@@ -13,6 +14,8 @@ const ContainerHeader = () => {
     const shaTab = useSelector(selectShaTab);
 
     const dispatch = useDispatch();
+
+    const navigate = useNavigate();
 
     const eventHandler = (event) => {
         dispatch(resetPasswordGeneratorStates());
@@ -23,6 +26,21 @@ const ContainerHeader = () => {
 
     useEffect(() => {
         if (passwordTab && !memorableTab && !shaTab) {
+            // ensure that client is showing the right page ---> when the user reloads or types url manually
+            // since colorState initialState starts with password generator color, we need to verify the page where user is in when he reloads or inserts url manually 
+            if (document.getElementById('numberChars') === undefined) {
+                if (document.getElementById('numberWords')) {
+                    navigate('/memorablepassword');
+                    dispatch(handleChange('memorableNav'))
+                } else if (document.getElementById('textToBeHashed')) {
+                    navigate('/sha256');
+                    dispatch(handleChange('shaNav'));
+                } else {
+                    navigate('/acknowledgements');
+                    dispatch(handleChange('acknowledgements'))
+                }
+            };
+            
             document.getElementById('passwordNav').style.backgroundColor = '#AF7AB3';
             document.getElementById('memorableNav').style.backgroundColor = '#151515';
             document.getElementById('shaNav').style.backgroundColor = '#151515';
