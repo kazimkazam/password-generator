@@ -22,6 +22,28 @@ const ContainerHeader = () => {
         dispatch(resetMemorablePasswordStates());
         dispatch(resetHashStates());
         dispatch(handleChange(event));
+
+        // reset inputs ---> this is important for the edge case where the user clicks on the nav tab that reloads the page he already is
+        // password generator page
+        if (document.getElementById('numberChars') !== null) {
+            document.getElementById('numberChars').value = 10;
+            document.getElementById('lowercase').checked = true;
+            document.getElementById('uppercase').checked = true;
+            document.getElementById('includeNumbers').checked = true;
+            document.getElementById('includeSymbols').checked = true;
+            document.getElementById('charsToExclude').value = '';
+            document.getElementById('howMany').value = '1';
+        };
+        // memorable password page
+        if (document.getElementById('numberWords') !== null) {
+            document.getElementById('numberWords').value = 3;
+            document.getElementById('separator').value = '';
+            document.getElementById('includeNumbers').checked = true;
+        };
+        // sha256 page
+        if (document.getElementById('textToBeHashed' !== null)) {
+            document.getElementById('textToBeHashed').value = '';
+        };
     };
 
     useEffect(() => {

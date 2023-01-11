@@ -48,13 +48,13 @@ const PasswordGenerator = (props) => {
                             <tr>
                                 <td><label>Characters to exclude:</label></td>
                                 <td></td>
-                                <td><input type={ 'text' } name={ 'charsToExclude' } style={ { borderColor: props.color } } onChange={ props.onChange } data-testid={ 'charsToExclude' } /></td>
+                                <td><input type={ 'text' } id={ 'charsToExclude' } name={ 'charsToExclude' } style={ { borderColor: props.color } } onChange={ props.onChange } data-testid={ 'charsToExclude' } /></td>
                             </tr>
                             <tr>
                                 <td><label>How many passwords (max: 10000):</label></td>
                                 <td></td>
                                 <td>
-                                    <select name={ 'howMany' } style={ { borderColor: props.color } } onChange={ props.onChange } data-testid={ 'howMany' } >
+                                    <select name={ 'howMany' } id={ 'howMany' } style={ { borderColor: props.color } } onChange={ props.onChange } data-testid={ 'howMany' } >
                                         <option value={ '1' }>1</option>
                                         <option value={ '10' }>10</option>
                                         <option value={ '100' }>100</option>

@@ -15,7 +15,7 @@ const MemorablePasswordGenerator = (props) => {
                             <tr>
                                 <td><label>Separator:</label></td>
                                 <td></td>
-                                <td><input type={ 'text' } name={ 'separator' } style={ { borderColor: props.color } } onChange={ props.onChange } data-testid={ 'separator' } /></td>
+                                <td><input type={ 'text' } id={ 'separator' } name={ 'separator' } style={ { borderColor: props.color } } onChange={ props.onChange } data-testid={ 'separator' } /></td>
                             </tr>
                             <tr>
                                 <td><label>Include numbers:</label></td>

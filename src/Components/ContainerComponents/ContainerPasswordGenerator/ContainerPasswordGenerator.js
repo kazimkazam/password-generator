@@ -47,10 +47,10 @@ const ContainerPasswordGenerator = () => {
         includeSymbols ? includeSymbolsLabel.style.backgroundColor = '#AF7AB3' : includeSymbolsLabel.style.backgroundColor = 'gray';
 
         if (!lowercase && !uppercase && !includeNumbers && !includeSymbols) {
-            document.getElementById('lowercase').checked = 'true';
-            document.getElementById('uppercase').checked = 'true';
-            document.getElementById('includeNumbers').checked = 'true';
-            document.getElementById('includeSymbols').checked = 'true';
+            document.getElementById('lowercase').checked = true;
+            document.getElementById('uppercase').checked = true;
+            document.getElementById('includeNumbers').checked = true;
+            document.getElementById('includeSymbols').checked = true;
 
             dispatch(handleAllCheckboxesBackTrue());
         };
